@@ -32,6 +32,7 @@ header nav
 {
     color: white;
     text-decoration: none;
+    text-shadow: 0px 0px 0.4em white,0px 0px 0.1em white,0px 0px 0.2em white;
 }
 
 .btn-menu 
@@ -162,3 +163,88 @@ footer p
 {
     padding-top: 4vh;
 }
+
+
+/*                                                                             */
+
+
+
+  /*////////// CONTACT ////////////*/
+
+  /*////////// FORMULAIRE ////////////*/
+  .boite {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 800px; 
+    padding: 10px 10px;
+  }
+  
+  .droite {
+    background-color: white;
+    padding: 35px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .barre {
+    height: 30px;
+    width: 710px;
+  }
+  
+  .barre-grosse {
+    height: 145px;
+    width: 710px;
+     
+  }
+  
+  input, textarea { 
+    border: 1px solid #d9dee3;
+    border-radius: 5px;
+    color: #000000;
+    text-align: left;
+    font-size: 13px;
+    font-family: 'Noto Sans', sans-serif;
+    padding-left: 10px;
+  }
+  
+  textarea{
+    padding: 5px 10px;
+  }
+  
+  .submit {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    background-color: #595959;
+    margin-top: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    
+  }
+  
+  .submit:hover {
+    background-color: rgb(112, 112, 112);
+  }
+  
+  h3 {
+    padding-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  form, #formupara {
+    margin-top: 10px;
+    line-height: 20px;
+    font-size: 11px;
+    color: #595959;
+  }
+  
+  #formutitre{
+    font-size: 25px;
+  }
+  
+  #formupara {
+    font-size: larger;
+  }
+ 
