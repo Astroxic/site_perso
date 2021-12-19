@@ -9,7 +9,8 @@ $page=yaml_parse($content);
         <title>Page Non Officiel</title>
     </head>
     <header>
-        <div class="header_border-gradient"></div>
+        <div class="ligne-menu gradient"></div>
+        <img class="img-header" src="img/logo.png">
         <nav>
             <?php
             foreach ($page as $menu=>$ancre){

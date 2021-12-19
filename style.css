@@ -4,27 +4,89 @@
     max-width: 100%;
 }
 
+section:not(:target)
+{
+    display: none;
+}
+
+section:target
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiAcc 
+{
+    font-size: 3em;
+    font-style: italic;
+    text-decoration: underline
+}
+.subAcc 
+{
+    font-style:italic;
+    text-decoration:underline;
+}
+
+/* ::::::: HEADER ::::::: */
+
 header 
 {
-	background-color: #2c3049!important;
+  display: flex;
+	background-color: #100e2d!important;/*#2c3049*/
 	box-shadow: 0px 5px 5px black;
-    text-shadow: 5px 2px 5px black;
-    font-weight: bold;
-	height: 15%;
+  text-shadow: 5px 2px 5px black;
+  font-weight: bold;
+	height: 10%;
 	position: relative;
 	min-width: 100%;
 	max-width: 100%;
 	margin-bottom: 8vh;
-    overflow: hidden;
+  
+}
+
+.ligne-menu {
+  position: absolute;
+    width: 3000px;
+    z-index: 101;
+    top: 0;
+    height: 5px;
+    animation: rotate 2s infinite linear;
+    
+}
+  
+
+
+
+
+@keyframes rotate {
+  from {
+    background-position: -1900px;
+  }
+  to { 
+    background-position: 0px;
+  }
+}
+
+.gradient {
+  background: linear-gradient(to right,  #7945f7 0%,#7945f7 16%,#ee8bf7 32%,#ee8bf7 48%,#7945f7 64%, #7945f7 100% ); /* W3C */
+}
+
+header img.img-header{
+  display: flex;
+  flex-direction: row;
+	justify-content: flex-end;
+  position: relative;
+
 }
 
 header nav
 {
-    position: relative;
-    display: flex;
-	color: white;
-	flex-direction: row;
-	justify-content: center; 
+  display: flex;
+  flex-direction: row;
+	justify-content: flex-end;
+  position: relative; 
+	color: white; 
 }
 
 
@@ -32,17 +94,17 @@ header nav
 {
     color: white;
     text-decoration: none;
-    text-shadow: 0px 0px 0.4em white,0px 0px 0.1em white,0px 0px 0.2em white;
+    text-shadow: 0px 0px 0.1em white,0px 0px 0.1em white,0px 0px 0.1em white;
 }
 
 .btn-menu 
 {
-    margin-top: 3.5vh;
-    margin-right: 40px;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    padding-left: 2vh;
-    padding-right: 2vh;   
+    margin-top: 2.7vh;
+    margin-right: 20px;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;   
     text-align: center;
     text-transform: uppercase;   
     -webkit-box-shadow: 0px 0px 4px 6px #191D2A; 
@@ -54,18 +116,23 @@ header nav
 
 .btn-menu:hover
 {
-    background: #2196f3;
-    box-shadow: 0 0 1em #2196f3, 0 0 2em #2196f3,0 0 0.2em #2196f3;
+    background: #7945f7;
+    box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
     color: black;
     text-shadow: 0px 0px 2em black, 0 0 1em black, 0 0 0.2em black;
 }
 
 body
 {
-    background: #1e2334;
+    background: #111;/*#1e2334*/
 	color: white;
     font-family: Montserrat,sans-serif;
 }
+
+/* ::::::: HEADER-FIN ::::::: */
+
+
+/* ::::::: ACCUEIL ::::::: */
 
 #accueil img
 {
@@ -82,12 +149,15 @@ body
 
 }
 
+/* ::::::: ACCUEIL-FIN ::::::: */
 
+/* ::::::: COMPETENCES ::::::: */
+ 
 #competences div.conteneur
 {  
     display: flex;
     justify-content: center;
-    box-shadow: 0px 0 8px 10px black;
+    box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
     height: inherit;
     text-align: center;
     padding-bottom: 5vh;
@@ -123,73 +193,35 @@ body
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
   }
+
+/* ::::::: COMPETENCES-FIN ::::::: */
  
-section:not(:target)
-{
-    display: none;
-}
 
-section:target
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*::::::: CONTACT :::::::*/
 
-.tiAcc 
-{
-    font-size: 3em;
-    font-style: italic;
-    text-decoration: underline
-}
-.subAcc 
-{
-    font-style:italic;
-    text-decoration:underline;
-}
+/*::::::: FORMULAIRE :::::::*/
 
-
-footer
-{
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    background-color: #2c3049;
-    height: 10vh;
-    width: 100%;
-}
-
-footer p 
-{
-    padding-top: 4vh;
-}
-
-
-/*                                                                             */
-
-
-
-  /*////////// CONTACT ////////////*/
-
-  /*////////// FORMULAIRE ////////////*/
   .boite {
     position: relative;
     display: block;
     margin: 0 auto;
     width: 800px; 
     padding: 10px 10px;
+    
   }
   
   .droite {
-    background-color: white;
+    background-color: #2c3049;
     padding: 35px;
     margin-top: 10px;
     border-radius: 10px;
+    box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
   }
   
   .barre {
     height: 30px;
     width: 710px;
+    background-color: #1e2334;
   }
   
   .barre-grosse {
@@ -199,7 +231,7 @@ footer p
   }
   
   input, textarea { 
-    border: 1px solid #d9dee3;
+    border: 1px solid #1e2334;
     border-radius: 5px;
     color: #000000;
     text-align: left;
@@ -210,13 +242,14 @@ footer p
   
   textarea{
     padding: 5px 10px;
+    background-color: #1e2334;
   }
   
   .submit {
     cursor: pointer;
     padding: 10px 20px;
     color: white;
-    background-color: #595959;
+    background-color: #7945f7;
     margin-top: 5px;
     border-radius: 5px;
     transition: all 0.5s ease 0s;
@@ -224,7 +257,10 @@ footer p
   }
   
   .submit:hover {
-    background-color: rgb(112, 112, 112);
+    background: #7945f7;
+    box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
+    color: black;
+    text-shadow: 0px 0px 2em black, 0 0 1em black, 0 0 0.2em black;
   }
   
   h3 {
@@ -248,3 +284,21 @@ footer p
     font-size: larger;
   }
  
+
+/* ::::::: FOOTER ::::::: */
+footer
+{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #100e2d;
+    height: 10vh;
+    width: 100%;
+}
+
+footer p 
+{
+    padding-top: 4vh;
+}
+
+/* ::::::: FOOTER-FIN ::::::: */
