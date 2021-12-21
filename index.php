@@ -4,21 +4,24 @@ $page=yaml_parse($content);
 ?>
 <html lang="fr-FR">
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0" charset="utf-8">
         <link rel="stylesheet" href="style.css"/>
         <title>Page Non Officiel</title>
+        <script src="https://www.google.com/recaptcha/api.js?render="></script>
     </head>
     <header>
         <div class="ligne-menu gradient"></div>
-        <img class="img-header" src="img/logo.png">
-        <nav>
-            <?php
-            foreach ($page as $menu=>$ancre){
-                echo "<div><a class='btn-menu h1menu' href='#$ancre'>$menu</a></div>";
-            }
-            ?>
-            </nav>
-        </header>
+        <h1>Pilard Vincent</h1>
+        <nav class="navbar">
+            <ul class="navbar-menu">               
+                <?php
+                foreach ($page as $menu=>$nav){?>
+                    <li class=""> <?php 
+                        echo "<a href='#$nav' class='btn-menu navbar-link '>"."<span>$menu</span>"."</a>"."</li>";
+                }?>    
+            </ul>
+        </nav>
+    </header>
     <body>
         <main>
         <?php
