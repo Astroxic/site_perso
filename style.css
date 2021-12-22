@@ -1,13 +1,14 @@
 :root{
   --header-background-color: #100e2d;
-  --navbar-separator-color: #ececec;
-
 }
 
 *{
     margin: 0;
     max-width: 100%;
+    padding: 0;
 }
+
+
 
 section:not(:target){
     display: none;
@@ -17,6 +18,7 @@ section:target{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5vh;
 }
 
 .tiAcc{
@@ -32,26 +34,27 @@ section:target{
 
 
 /* ::::::: HEADER ::::::: */
-header 
-{
+header {
+  box-sizing: border-box;
   display: flex;
-	background-color: var(--header-background-color);/*#2c3049*/
+  justify-content: space-between;
+  align-items: center;
+	height: 10vh;
+	width: 100%; 
+  font-family: Montserrat,sans-serif;
+  font-weight: bold;
+  background-color: var(--header-background-color);/*#2c3049*/
 	box-shadow: 0px 5px 5px black;
   text-shadow: 5px 2px 5px black;
-  font-weight: bold;
-	height: 10%;
-	width: 100%;
-	margin-bottom: 5vh; 
-  font-family: Montserrat,sans-serif;
 }
 
 .ligne-menu {
-  position: absolute;
-    width: inherit;
-    z-index: 101;
-    top: 0;
-    height: 5px;
-    animation: rotate 2s infinite linear;
+  position: fixed;
+  width: inherit;
+  z-index: 1001;
+  top: 0;
+  height: 5px;
+  animation: rotate 2s infinite linear;
     
 }
 
@@ -69,52 +72,83 @@ header
 }
 
 header h1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  
+  z-index: 1001;
+  display: inline;
   margin-left: 1vw;
-  margin-top: 20px;
 }
 
-.btn-menu{
+
+
+.menu-items {
+  list-style: none;
   display: flex;
-  margin: 3vh 0px 0px 10px; 
-  width: fit-content;
-  padding:1.5vh;
-  justify-content: center;
-  text-transform: uppercase;   
+  align-items: center;
+  gap: .5rem;
+  padding-right: 1vw;
+  text-transform: uppercase; 
+}
+
+
+.menu-items li a{
+  text-decoration: none; 
+  padding: 1.5vh; 
   border-radius: 20px;
   transition: 0.5s; 
   color: white;
   text-shadow: 0px 0px 0.1em white,0px 0px 0.1em white,0px 0px 0.1em white; 
 }
 
-.btn-menu:hover
-{
+.menu-items li a:hover{
     background: #7945f7;
     box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
     color: black;
     text-shadow: 0px 0px 2em black, 0 0 1em black, 0 0 0.2em black;
 }
 
-.navbar{
-  width: inherit;
-  height: inherit;
+.menu-btn{
   position: relative;
+  display: none;
+  margin-right: 3vw;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.navbar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+.hamburger, .hamburger::before, .hamburger::after{
+  z-index: 1001;
+  background-color: #7945f7;
+  width: 1.5rem;
+  height: 0.1rem;
+  transition: all 0.5s ease-in-out;
 }
-.navbar-link{
-  text-decoration: none;
+
+.hamburger::before, .hamburger::after{
+  content:"";
+  position: absolute;
+}
+
+.hamburger::before{
+  transform: translateY(0.5rem);
+}
+.hamburger::after{
+  transform: translateY(-0.5rem);
+}
+
+/* animation hamburger*/
+
+.menu-btn.open .hamburger{
+  transform: translateX(-2rem);
+  background-color: transparent;
+}
+
+.menu-btn.open .hamburger::before{
+  transform: rotate(45deg) translate(1.5rem, -1.5rem);
+}
+.menu-btn.open .hamburger::after{
+  transform: rotate(-45deg) translate(1.5rem, 1.5rem);
 }
 
 /* ::::::: HEADER-FIN ::::::: */
@@ -148,7 +182,11 @@ body
 
 
 /* ::::::: COMPETENCES ::::::: */
- 
+
+#competences h1{
+  font-size: 2rem;
+}
+
 #competences div.conteneur
 {  
     display: flex;
@@ -259,7 +297,7 @@ body
     text-shadow: 0px 0px 2em black, 0 0 1em black, 0 0 0.2em black;
   }
   
-  h3 {
+  #formulaire h3 {
     padding-top: 12px;
     font-size: 14px;
     font-weight: 500;
@@ -285,6 +323,7 @@ body
 footer
 {
     position: fixed;
+    display: block;
     bottom: 0;
     text-align: center;
     background-color: #100e2d;
@@ -299,8 +338,53 @@ footer p
 
 /* ::::::: FOOTER-FIN ::::::: */
 
-@media only screen and (max-width:1024px) {
-  header img.img-header{
-    display: none;
+/* ::::::: MEDIA-QUERIES ::::::: */
+
+@media only screen and (max-width: 1128px) {
+  
+  .menu-btn{
+    display: flex;
   }
+  .menu-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--header-background-color);
+    transition: .6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .menu-items.open{
+    height: calc(100vh - 0vh);
+    display: flex;
+    visibility: visible;
+  }
+
+  .menu-items.open li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; 
+    font-size: 3vh;
+    transition: 0.3s; 
+    color: white;
+    text-shadow: 0px 0px 0.1em white,0px 0px 0.1em white,0px 0px 0.1em white; 
+  }
+  
+  .menu-items.open li a:hover{
+      background: #7945f7;
+      box-shadow: 0 0 1em #7945f7, 0 0 2em #7945f7,0 0 0.2em #7945f7;
+      color: black;
+      text-shadow: 0px 0px 2em black, 0 0 1em black, 0 0 0.2em black;
+  }
+
+  
 }

@@ -4,20 +4,22 @@ $page=yaml_parse($content);
 ?>
 <html lang="fr-FR">
     <head>
-        <meta name="viewport" content="width=device-width, initial scale=1.0" charset="utf-8">
+        <meta name="viewport" content="width=device-width, scale=1.0" charset="utf-8">
         <link rel="stylesheet" href="style.css"/>
         <title>Page Non Officiel</title>
         <script src="https://www.google.com/recaptcha/api.js?render="></script>
+        <script type="text/javascript" src="js/code.js"></script>
     </head>
     <header>
         <div class="ligne-menu gradient"></div>
         <h1>Pilard Vincent</h1>
-        <nav class="navbar">
-            <ul class="navbar-menu">               
+        <nav id="nav">
+            <div class="menu-btn"><div class="hamburger"></div></div>
+            <ul class="menu-items" role="menu-items">               
                 <?php
                 foreach ($page as $menu=>$nav){?>
-                    <li class=""> <?php 
-                        echo "<a href='#$nav' class='btn-menu navbar-link '>"."<span>$menu</span>"."</a>"."</li>";
+                    <li class="menu-item"> <?php 
+                        echo "<a href='#$nav'>"."<span>$menu</span>"."</a>"."</li>";
                 }?>    
             </ul>
         </nav>
@@ -31,12 +33,11 @@ $page=yaml_parse($content);
                 echo"</section>";
         }
         ?>
-        </main>
-       
+        </main>  
     </body>
     <footer>
-        <?php
-        include("php/footer.php");
-        ?>
-    </footer>
+            <?php
+            include("php/footer.php");
+            ?>
+        </footer>
 </html>
