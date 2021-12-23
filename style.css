@@ -171,7 +171,7 @@ body
 #accueil div#conteneur{
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 30vw;
   height: 50vh;
   border-radius: 20px;
   box-shadow: 0 0 0.2em 0.2em #7945f7;
@@ -181,6 +181,12 @@ body
 #accueil div#banderole{
   text-align: center;
   background-color: #7945f7;
+  padding:1vh;
+}
+#accueil div#banderole h1, h2{
+  color: #0f0f0f;
+  text-shadow: 0 0 0.1em black, 0 0 0.1em black;
+
 }
 
 #accueil div#contenu{
