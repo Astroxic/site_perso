@@ -13,6 +13,9 @@
   -
     competence : Sql
     niveau : 50
+  -
+    competence : Python
+    niveau : 60
 -
   Domaine : Réseau
   Objet : 
@@ -25,13 +28,16 @@
 
 -
   Domaine : Langues
-  Objet : 
+  Objet :
+  -
+    competence : Français
+    niveau: 98
   -
     competence : Anglais 
-    niveau : 80
+    niveau : 78
   -
     competence : Espagnol
-    niveau : 60
+    niveau : 38.85
   
   
   

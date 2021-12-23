@@ -12,7 +12,7 @@ echo '<div class=conteneur>';
             echo '</div>';
             foreach($domaine["Objet"] as $elt){?>
                     <label for="<?=$elt['competence']?>"><?=$elt['competence']?></label><br>
-                    <progress class="skill" id="<?=$elt['competence']?>" max='100' value="<?=$elt['niveau']?>"><?=$elt['niveau']?></progress><br>
+                    <progress id="<?=$elt['competence']?>" max='100' value="<?=$elt['niveau']?>"><?=$elt['niveau']?></progress><br>
                     <?php
                 
     }
