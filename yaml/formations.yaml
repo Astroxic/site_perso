@@ -1,0 +1,24 @@
+-
+  Nom : BTS SIO
+  Etablissement : SupAvenir Sainte Ursule
+  DateDeDebut : 2021
+  DateDeFin : 2023
+  Lieu : Caen 
+  Contenu : En cours de formation
+  photo : ./img/supavenir.png
+-
+  Nom : Baccalauréat Général
+  Etablissement : Lycée Malherbe
+  DateDeDebut : 2017
+  DateDeFin : 2021
+  Lieu : Caen
+  Contenu : Obtention du Baccalauréat Général Mention Assez Bien
+  photo : ./img/malherbe.png
+-
+  Nom : Brevet Des Collèges
+  Etablissement : Collège Jean Moulin
+  DateDeDebut : 2013
+  DateDeFin : 2017
+  Lieu : Caen
+  Contenu : Obtention du Brevet Des Collèges Mention Bien
+  photo : ./img/jm.png

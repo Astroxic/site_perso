@@ -36,8 +36,8 @@ $page=yaml_parse($content);
         </main>  
     </body>
     <footer>
-            <?php
-            include("php/footer.php");
-            ?>
-        </footer>
+        <?php
+        include("php/footer.php");
+        ?>
+    </footer>
 </html>

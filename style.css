@@ -240,8 +240,7 @@ body
     
 }
 
-#competences div.contenu
-{
+#competences div.contenu{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -259,6 +258,7 @@ body
 {
     -webkit-appearance: none;
     appearance: none;
+    margin-bottom: 1vh;
 }
 
 #competences progress::-webkit-progress-bar {
@@ -280,6 +280,55 @@ body
 
 /* ::::::: COMPETENCES-FIN ::::::: */
  
+/* ::::::: FORMATIONS ::::::: */
+
+#formations div.formations{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10vh;
+  height: 75vh;
+  width: 100%;
+}
+
+#formations div.conteneur{
+  max-width: 100%;
+  max-height: 100%;  
+  display: flex;
+  margin-top: 3vh;
+  gap: 2rem;
+    
+}
+
+#formations div.contenu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2vh;
+  padding: 5vh 2vw 1vh 2vw;
+  width: fit-content;
+  height: inherit;
+  padding-top: 2vh;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 0.1em 0.1em #7945f7, 0 0 0.2em 0.2em #7945f7,0 0 0.2em #7945f7;
+}
+
+#formations div.contenu img{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  height: 30vh;
+  width: 40vh;
+}
+
+#formations div.contenu p{
+  margin-bottom: 1vh;
+}
+
+
+
+/* ::::::: FORMATIONS-FIN ::::::: */
 
 /*::::::: FORMULAIRE :::::::*/
 
@@ -523,8 +572,13 @@ footer div#btn-foot a:hover{
     margin-bottom: .7vh;  
   }
   /*::::::: COMPETENCES-FIN :::::::*/
-
-
+  /*::::::: FORMATIONS :::::::*/
+  #formations div.conteneur{
+    display: flex;
+    flex-direction: column;
+     
+  }
+  /*::::::: FORMATIONS-FIN :::::::*/
   /*::::::: FORMULAIRE :::::::*/
   .boite {
     width: 75vw;  
