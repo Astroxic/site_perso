@@ -485,8 +485,7 @@ body
   }
 
 /* ::::::: FOOTER ::::::: */
-footer
-{
+footer{
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -497,12 +496,10 @@ footer
     width: 100%;
 }
 
-footer p 
-{
+footer p{
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: auto;
 }
 
 footer div#btn-foot{

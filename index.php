@@ -6,7 +6,7 @@ $page=yaml_parse($content);
     <head>
         <meta name="viewport" content="width=device-width, scale=1.0" charset="utf-8">
         <link rel="stylesheet" href="style.css"/>
-        <title>Page Non Officiel</title>
+        <title>Page Officielle</title>
         <script src="https://www.google.com/recaptcha/api.js?render="></script>
         <script type="text/javascript" src="js/code.js"></script>
     </head>
