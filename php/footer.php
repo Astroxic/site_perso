@@ -7,3 +7,5 @@ $foot=yaml_parse($footer);
     <?php echo $foot['credit']?> 
 
 </p>
+
+<?php echo '<div id="btn-foot"><a href="img/PilarVincent.pdf">Téléchargez Mon CV</a></div>';?>
