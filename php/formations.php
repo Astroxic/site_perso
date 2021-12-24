@@ -1,5 +1,5 @@
 <?php
-$formations=file_get_contents("yaml/formations.yaml");
+$formations=file_get_contents("./yaml/formations.yaml");
 $form=yaml_parse($formations);
 ?>
 
@@ -16,6 +16,7 @@ foreach($form as $form){
         <p>Date de Fin : <?=$form['DateDeFin']?></p>
         <p>Lieu : <?=$form['Lieu']?></p>
         <p>Contenu : <?=$form['Contenu']?></p> <?php
+        
     echo '</div>';
 }
 echo '</div>';

@@ -214,6 +214,28 @@ body
 /* ::::::: ACCUEIL-FIN ::::::: */
 
 
+#apropos div.apropos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10vh;
+  height: 75vh;
+  width: 100%;
+}
+
+#apropos div.conteneur{
+  max-width: 100%;
+  max-height: 100%;  
+  margin-top: 3vh;
+  border-radius: 20px;
+  padding:1em;
+  box-shadow: 0 0 0.1em 0.1em #7945f7, 0 0 0.2em 0.2em #7945f7,0 0 0.2em #7945f7;
+}
+#apropos div.conteneur p{
+    margin-bottom: 1vh;
+    
+}
+
 /* ::::::: COMPETENCES ::::::: */
 
 
@@ -280,6 +302,55 @@ body
 
 /* ::::::: COMPETENCES-FIN ::::::: */
  
+/* ::::::: EXPERIENCES ::::::: */
+
+#experiences div.experiences{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10vh;
+  height: 75vh;
+  width: 100%;
+}
+
+#experiences div.conteneur{
+  max-width: 100%;
+  max-height: 100%;  
+  display: flex;
+  margin-top: 3vh;
+  gap: 2rem;
+    
+}
+
+#experiences div.contenu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vh;
+  padding: 5vh 2vw 1vh 2vw;
+  width: fit-content;
+  height: inherit;
+  padding-top: 2vh;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 0.1em 0.1em #7945f7, 0 0 0.2em 0.2em #7945f7,0 0 0.2em #7945f7;
+  gap: 1rem;
+}
+
+#experiences div.conteneur img{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  height: 30vh;
+  width: 40vh;
+}
+
+#experiences div.contenu p{
+  margin-bottom: 1vh;
+}
+/* ::::::: EXPERIENCES-FIN ::::::: */
+
+
 /* ::::::: FORMATIONS ::::::: */
 
 #formations div.formations{
@@ -303,7 +374,7 @@ body
 #formations div.contenu{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   font-size: 2vh;
   padding: 5vh 2vw 1vh 2vw;
   width: fit-content;
@@ -312,9 +383,10 @@ body
   border-radius: 20px;
   background-color: transparent;
   box-shadow: 0 0 0.1em 0.1em #7945f7, 0 0 0.2em 0.2em #7945f7,0 0 0.2em #7945f7;
+  gap: 1rem;
 }
 
-#formations div.contenu img{
+#formations div.conteneur img{
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -325,9 +397,6 @@ body
 #formations div.contenu p{
   margin-bottom: 1vh;
 }
-
-
-
 /* ::::::: FORMATIONS-FIN ::::::: */
 
 /*::::::: FORMULAIRE :::::::*/

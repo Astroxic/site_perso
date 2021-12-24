@@ -8,4 +8,4 @@ $foot=yaml_parse($footer);
 
 </p>
 
-<?php echo '<div id="btn-foot"><a href="img/PilardVincent.pdf">Téléchargez Mon CV</a></div>';?>
+<?php echo '<div id="btn-foot"><a href="img/PilardVincent.pdf" target="_blank">Téléchargez Mon CV</a></div>';?>
