@@ -2,6 +2,7 @@
 $competences=\file_get_contents('./yaml/competences.yaml');
 $comp=yaml_parse($competences);
 ?>
+<?php echo'<div class=competences>'?>
 <h1>Mes compétences</h1>
 <?php
 echo '<div class=conteneur>';
@@ -18,4 +19,5 @@ echo '<div class=conteneur>';
     }
     echo '</div>';
 }
+echo '</div>';
 echo '</div>';
