@@ -229,13 +229,14 @@ body
   font-size: 2em;
 }
 
-#competences div.conteneur
-{  
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 3vh;
-    gap: 2rem;
+#competences div.conteneur{
+  max-width: 100%;
+  max-height: 100%;  
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 3vh;
+  gap: 2rem;
     
 }
 
@@ -497,13 +498,12 @@ footer div#btn-foot a:hover{
     margin-bottom: 1vh;
   }
   
-  #competences div.conteneur
-  {  
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: .7rem;
-      margin-top: 0;
+  #competences div.conteneur{  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .7rem;
+    margin-top: 0;
   }
   
   #competences div.contenu
