@@ -18,9 +18,6 @@ ul{
   padding-inline-start: 0;
 }
 
-li{
-  border: solid 2px red;
-}
 
 section:not(:target){
     display: none;
@@ -99,6 +96,7 @@ header h1 {
   gap: .5rem;
   padding-right: 1vw;
   text-transform: uppercase; 
+  list-style-type: none;
 }
 
 
