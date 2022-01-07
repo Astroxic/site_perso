@@ -10,7 +10,7 @@
 }
 
 ul{
-  border: solid 2px red;
+  
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
@@ -18,7 +18,9 @@ ul{
   padding-inline-start: 0;
 }
 
-
+li{
+  border: solid 2px red;
+}
 
 section:not(:target){
     display: none;
