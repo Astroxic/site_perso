@@ -21,7 +21,7 @@ ul{
 
 li{
   border: solid 2px red;
-  
+  padding: 0;
 }
 
 section:not(:target){
