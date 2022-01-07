@@ -16,11 +16,12 @@ ul{
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
+  list-style-type: none;
 }
 
 li{
   border: solid 2px red;
-  list-style-type: none;
+  
 }
 
 section:not(:target){
